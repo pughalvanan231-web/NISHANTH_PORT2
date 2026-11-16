@@ -1,0 +1,17 @@
+{
+  "name": "orchestrated-clone",
+  "version": "1.0.0",
+  "description": "Pixel-accurate clone of https://orchestrated.nl/ - Motion Director Joris van Raaij",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "motion-direction",
+    "webgl",
+    "audio-synth",
+    "orchestrated"
+  ],
+  "author": "",
+  "license": "ISC"
+}

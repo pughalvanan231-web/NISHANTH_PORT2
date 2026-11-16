@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orchestrated — Motion Director Joris van Raaij</title>
+  <meta name="description" content="Through Orchestrated, Joris van Raaij designs and directs motion for brands and agencies. From motion systems to immersive motion and Rive animations.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Orchestrated — Motion Director Joris van Raaij">
+  <meta property="og:description" content="Motion director based in the Netherlands. Designing motion systems, immersive motion and Rive animations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orchestrated.nl">
+
+  <!-- Original Next.js CSS Bundles -->
+  <link rel="stylesheet" href="_next/static/css/e619878a0ff0d347.css">
+  <link rel="stylesheet" href="_next/static/css/38b0a0a1c15f5d1b.css">
+
+  <!-- Custom Enhancement & Layout Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Three.js for 3D WebGL Rocky Landscape -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Hidden Video sampled into 3D Rocky Terrain -->
+  <video id="header-reel-video" src="assets/webgl/header_reel_edit.mp4" playsinline muted loop style="display: none;"></video>
+
+  <!-- Skip Link for Accessibility -->
+  <a href="#content" class="sr-only">SKIP TO CONTENT</a>
+
+  <!-- ========================================================================
+       Header & Global Navigation
+       ======================================================================== -->
+  <header class="site-header Header_header__qeMov">
+    <div class="Header_bar__06oKw" data-header-bar="true">
+      <a href="#" class="header-logo" aria-label="Orchestrated">
+        <svg class="Header_logo__jCS9J" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 276 40" role="img" aria-label="Orchestrated">
+          <path fill="#fff" d="M14.857 0h29.731c2.727.01 4.934 2.248 4.934 5 0 2.753 2.22 5 4.953 5s4.954 2.242 4.954 5.001V25c0 2.763-2.217 5-4.954 5s-4.953-2.237-4.953-5V15c0-2.762-2.217-5-4.954-5h-29.71c-2.734 0-4.954 2.238-4.954 5V25c0 2.763 2.22 5 4.953 5h29.711c2.737 0 4.954 2.238 4.954 5S47.315 39.99 44.588 40h-29.73c-2.734 0-4.954-2.238-4.954-5s-2.217-5-4.954-5S0 27.754 0 24.994v-9.997c0-2.763 2.22-5 4.953-5s4.954-2.238 4.954-5C9.907 2.233 12.124 0 14.857 0M88.34 33.59c-3.502 0-6.434-1.308-8.811-3.91-2.377-2.598-3.575-5.825-3.575-9.678s1.178-7.117 3.539-9.68c2.34-2.561 5.29-3.832 8.848-3.832s6.507 1.29 8.867 3.853c2.34 2.562 3.522 5.806 3.522 9.732s-1.178 7.06-3.558 9.642c-2.377 2.582-5.326 3.87-8.831 3.87zm6.416-6.177c1.678-1.916 2.525-4.333 2.525-7.226s-.83-5.531-2.506-7.52c-1.678-1.973-3.816-2.97-6.434-2.97s-4.757.997-6.396 2.97c-1.641 1.972-2.469 4.461-2.469 7.447s.83 5.346 2.49 7.282c1.658 1.937 3.78 2.913 6.342 2.913s4.773-.96 6.45-2.893zM104.166 33.222V14.345h3.171v2.452c.202-.407.46-.79.791-1.161.315-.351.921-.719 1.808-1.09q1.326-.525 3.098-.496h.516v3.28l-.367.037c-3.889-.093-5.842 1.77-5.842 5.62V33.22h-3.171zM116.417 30.77c-1.642-1.788-2.469-4.128-2.469-6.988s.831-5.253 2.489-7.077 3.797-2.728 6.415-2.728c2.082 0 3.889.61 5.382 1.844 1.493 1.235 2.377 2.82 2.619 4.757h-3.317c-.222-1.09-.775-1.99-1.642-2.711-.867-.719-1.917-1.07-3.115-1.07-1.585 0-2.876.626-3.889 1.86-1.013 1.255-1.513 2.93-1.513 5.016s.497 3.76 1.513 4.995c1.013 1.254 2.304 1.88 3.889 1.88q1.854 0 3.151-1.106c.868-.718 1.401-1.622 1.602-2.671h3.317c-.278 1.973-1.178 3.575-2.671 4.83q-2.269 1.88-5.475 1.88c-2.545 0-4.644-.904-6.286-2.712M133.957 33.222V6.788h3.244V16.87c.48-.774 1.235-1.476 2.248-2.102 1.013-.609 2.194-.92 3.558-.92 1.9 0 3.539.646 4.959 1.917q2.101 1.935 2.102 5.862v11.595h-3.43V21.905c-.02-1.602-.423-2.876-1.198-3.78-.791-.904-1.807-1.364-3.078-1.364q-2.27 0-3.704 1.771c-.977 1.198-1.457 2.764-1.457 4.72v9.974h-3.244zM155.351 31.011c-1.602-1.75-2.417-4.111-2.417-7.077s.811-5.29 2.417-7.097q2.403-2.71 6.415-2.71c2.674 0 4.793.996 6.306 2.968 1.512 1.99 2.211 4.552 2.082 7.67h-13.827v.036c0 1.808.497 3.244 1.493 4.333.996 1.09 2.34 1.642 4.019 1.642a5.6 5.6 0 0 0 3.005-.884c.94-.589 1.586-1.476 1.937-2.67h3.058c-.278 1.9-1.142 3.428-2.598 4.627-1.457 1.198-3.281 1.807-5.439 1.807-2.691 0-4.849-.884-6.451-2.635zm11.317-9.142c-.238-2.97-1.989-4.886-5.015-4.886-1.493 0-2.691.443-3.631 1.344-.94.903-1.456 2.082-1.586 3.538h10.232zM174.146 31.951c-1.513-1.125-2.324-2.71-2.417-4.773h3.171c.351 2.36 2.211 3.668 4.793 3.668s3.853-1.328 3.853-3.099c0-1.492-1.105-2.416-3.998-2.876-2.711-.407-4.608-1.09-5.661-2.046-1.069-.94-1.602-2.118-1.602-3.502 0-1.456.646-2.71 1.917-3.76 1.271-1.033 2.876-1.55 4.849-1.55s3.76.534 5.18 1.603c1.401 1.069 2.159 2.671 2.248 4.81h-3.059c-.238-2.397-1.678-3.595-4.296-3.595-.977 0-1.824.238-2.526.701-.718.46-1.069 1.07-1.069 1.824 0 1.437 1.347 2.34 4.019 2.728 2.671.387 4.554 1.013 5.676 1.916 1.126.904 1.679 2.159 1.679 3.74 0 1.732-.682 3.152-2.066 4.241q-2.075 1.659-5.144 1.658c-2.194 0-4.038-.572-5.547-1.694zM194.711 33.222c-1.456 0-2.635-.443-3.522-1.347-.903-.884-1.347-2.065-1.347-3.558V17.145h-2.913v-2.8h2.913V8.648h3.171v5.697h4.644v2.8h-4.644v10.563c0 1.824.662 2.562 2.34 2.562h2.377l-.036 2.949h-2.986zM200.031 33.222V14.345h3.171v2.452c.202-.407.46-.79.791-1.161.314-.351.92-.719 1.807-1.09q1.326-.525 3.098-.496h.517v3.28l-.368.037c-3.889-.093-5.842 1.77-5.842 5.62V33.22h-3.171zM212.06 32.044q-1.882-1.52-1.881-4.148c0-1.75.573-3.098 1.732-4.038 1.178-.94 2.893-1.493 5.144-1.695a52 52 0 0 0 1.953-.202c.423-.056.976-.185 1.641-.367 1.328-.351 1.953-1.033 1.953-1.99 0-.83-.351-1.512-1.069-2.025q-1.077-.775-2.711-.775c-1.344 0-2.396.331-3.171.997-.791.681-1.254 1.512-1.4 2.489l-3.393.036c.202-1.9.996-3.446 2.416-4.644 1.401-1.198 3.208-1.787 5.403-1.787s4.038.589 5.345 1.787q1.937 1.798 1.937 4.644V33.23h-3.357v-2.526c-1.512 1.937-3.522 2.893-6.047 2.893-1.751 0-3.264-.516-4.499-1.549zm8.775-2.562c1.162-.848 1.751-2.102 1.771-3.74l.036-2.212c-.811.573-2.433.96-4.886 1.162-2.747.238-4.111 1.255-4.111 3.022 0 1.768 1.437 2.893 3.41 2.986 1.363.056 2.618-.35 3.78-1.218M234.89 33.222c-1.457 0-2.635-.443-3.522-1.347-.904-.884-1.348-2.065-1.348-3.558V17.145h-2.912v-2.8h2.912V8.648h3.172v5.697h4.644v2.8h-4.644v10.563c0 1.824.662 2.562 2.34 2.562h2.376l-.036 2.949h-2.986zM240.927 31.011c-1.602-1.75-2.416-4.111-2.416-7.077s.811-5.29 2.416-7.097q2.404-2.71 6.415-2.71c2.675 0 4.793.996 6.306 2.968 1.513 1.99 2.211 4.552 2.082 7.67h-13.826v.036c0 1.808.496 3.244 1.492 4.333.997 1.09 2.341 1.642 4.019 1.642a5.6 5.6 0 0 0 3.006-.884c.94-.589 1.585-1.476 1.936-2.67h3.059c-.279 1.9-1.142 3.428-2.599 4.627-1.456 1.198-3.28 1.807-5.438 1.807-2.692 0-4.85-.884-6.452-2.635zm11.317-9.142c-.238-2.97-1.989-4.886-5.014-4.886-1.493 0-2.692.443-3.632 1.344-.94.903-1.456 2.082-1.585 3.538h10.231zM260.073 30.975c-1.715-1.771-2.582-4.128-2.582-7.077 0-2.95.831-5.29 2.469-7.077 1.642-1.771 3.652-2.655 5.992-2.655 2.876 0 5.18 1.327 6.342 3.244V6.788h3.135v26.434h-3.135v-2.876c-.46.867-1.255 1.622-2.377 2.287-1.125.682-2.416 1.013-3.853 1.013-2.287 0-4.276-.884-5.991-2.671m10.655-2.231q1.603-1.827 1.602-4.7c0-1.917-.533-3.668-1.602-4.96-1.069-1.29-2.469-1.936-4.22-1.936-1.659 0-3.006.61-4.038 1.844q-1.55 1.852-1.55 4.757c0 1.936.517 3.65 1.55 4.922s2.376 1.916 4.038 1.916 3.135-.608 4.22-1.843"></path>
+        </svg>
+      </a>
+
+      <nav aria-label="Site">
+        <button id="credits-trigger" class="glass-pill Button_button__I0_Mb" aria-label="Open credits">
+          CREDITS
+        </button>
+      </nav>
+    </div>
+
+    <!-- Sound Status & Trigger -->
+    <div class="header-controls">
+      <button id="sound-toggle" class="glass-pill" aria-label="Unmute audio" keyshortcuts="M">
+        <span id="sound-label">UNMUTE</span>
+        <span class="shortcut-key">M</span>
+      </button>
+
+      <button id="studio-trigger" class="glass-pill" aria-label="Sound Studio">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="4" y1="21" x2="4" y2="14"></line>
+          <line x1="4" y1="10" x2="4" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12" y2="3"></line>
+          <line x1="20" y1="21" x2="20" y2="16"></line>
+          <line x1="20" y1="12" x2="20" y2="3"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section & 3D Interactive WebGL
+       ======================================================================== -->
+  <section class="hero-section Hero_hero__main">
+    <h1 class="sr-only">Joris van Raaij — Motion Director at Orchestrated</h1>
+
+    <!-- 3D Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <button id="play-reel-btn" class="glass-pill play-reel-btn Hero_playReel__of_bS" aria-label="Play showreel video" data-play-reel="true">
+        <svg viewBox="0 0 24 24">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        PLAY REEL
+      </button>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator ScrollIndicator_scrollIndicator__gH7s7">
+      <span class="ScrollIndicator_label__a8_hr">SCROLL</span>
+      <canvas class="ScrollIndicator_wave__wXE8T" width="48" height="16"></canvas>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Main Content Container
+       ======================================================================== -->
+  <main id="content" class="content-wrapper">
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <span class="section-eyebrow">ABOUT</span>
+      <p class="about-intro-text">
+        I’m Joris, a motion director based in the Netherlands. Through Orchestrated I design and direct motion for brands and agencies. From motion systems to immersive motion and Rive animations. I care about motion that works: not an afterthought, but the backbone of digital storytelling.
+      </p>
+    </section>
+
+    <!-- Impactful Collaborations -->
+    <section id="collaborations" class="collab-section">
+      <div class="collab-header">
+        <span class="section-eyebrow">IMPACTFUL COLLABORATIONS</span>
+        <p class="collab-desc">
+          I’ve had the chance to work with big and small <a href="#clients">brands</a> across the globe, on everything from motion systems to one-pagers and immersive experiences. And picked up a few <a href="#awards">awards</a> along the way.
+        </p>
+      </div>
+
+      <!-- Awards Marquee Ticker -->
+      <div id="awards" class="marquee-container">
+        <div class="marquee-track">
+          <div class="marquee-item"><img src="assets/images/svg/awards/awwwards.svg" alt="Awwwards"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/fwa.svg" alt="FWA"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/cssda.svg" alt="CSS Design Awards"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/webby.svg" alt="The Webby Awards"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/lovie.svg" alt="The Lovie Awards"></div>
+          <!-- Duplicated for infinite smooth loop -->
+          <div class="marquee-item"><img src="assets/images/svg/awards/awwwards.svg" alt="Awwwards"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/fwa.svg" alt="FWA"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/cssda.svg" alt="CSS Design Awards"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/webby.svg" alt="The Webby Awards"></div>
+          <div class="marquee-item"><img src="assets/images/svg/awards/lovie.svg" alt="The Lovie Awards"></div>
+        </div>
+      </div>
+
+      <!-- Clients Marquee Ticker -->
+      <div id="clients" class="marquee-container">
+        <div class="marquee-track marquee-track-reverse">
+          <div class="marquee-item"><img src="assets/images/svg/clients/bmw.svg" alt="BMW"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/vast.svg" alt="Vast"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/nike.svg" alt="Nike"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/lucid.svg" alt="Lucid"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/moncler.svg" alt="Moncler"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/gucci.svg" alt="Gucci"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/koeningsegg.svg" alt="Koenigsegg"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/porsche.svg" alt="Porsche"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/coach.svg" alt="Coach"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/fortnite.svg" alt="Fortnite"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/getty.svg" alt="Getty"></div>
+          <!-- Duplicated for infinite loop -->
+          <div class="marquee-item"><img src="assets/images/svg/clients/bmw.svg" alt="BMW"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/vast.svg" alt="Vast"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/nike.svg" alt="Nike"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/lucid.svg" alt="Lucid"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/moncler.svg" alt="Moncler"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/gucci.svg" alt="Gucci"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/koeningsegg.svg" alt="Koenigsegg"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/porsche.svg" alt="Porsche"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/coach.svg" alt="Coach"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/fortnite.svg" alt="Fortnite"></div>
+          <div class="marquee-item"><img src="assets/images/svg/clients/getty.svg" alt="Getty"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="work" class="work-section CasesGallery_gallery__lWEsd">
+      <div class="work-header">
+        <span class="section-eyebrow">FEATURED</span>
+        <h2 class="section-title">Selected work</h2>
+        <p class="work-subtext">
+          A mix of recent work to showcase what I do. Check out the cases for more recordings and a little background on some projects.
+        </p>
+      </div>
+
+      <div class="cases-grid">
+        <!-- 1. Vast Motion Toolkit -->
+        <article class="case-card case-card-large" data-case="vast">
+          <div class="case-media-wrap">
+            <video src="assets/images/cases/vast/03endcardmoonrockonvaporgray16x9small-mv586vrl.mp4" autoplay loop muted playsinline></video>
+          </div>
+          <div class="case-overlay-info">
+            <span class="case-client-badge">Vast × Antinomy Studio</span>
+            <h3 class="case-title">
+              Vast Motion Toolkit
+              <span class="case-arrow-btn">↗</span>
+            </h3>
+            <p class="case-summary">
+              Vast wanted a motion system that creatives anywhere in the world could use to make motion that fits the brand. Built around gravity and animation anchors.
+            </p>
+          </div>
+        </article>
+
+        <!-- 2. Extra.Email -->
+        <article class="case-card case-card-half" data-case="extra">
+          <div class="case-media-wrap">
+            <video src="assets/images/cases/featured/extraexplainer01v0031x1-mvaztkix.rmvazu8fl.mp4" autoplay loop muted playsinline></video>
+          </div>
+          <div class="case-overlay-info">
+            <span class="case-client-badge">Extra.Email</span>
+            <h3 class="case-title">
+              Onboarding video
+              <span class="case-arrow-btn">↗</span>
+            </h3>
+            <p class="case-summary">
+              Triage principles translated into dynamic, floating email card interactions.
+            </p>
+          </div>
+        </article>
+
+        <!-- 3. Persepolis Reimagined -->
+        <article class="case-card case-card-half" data-case="persepolis">
+          <div class="case-media-wrap">
+            <video src="assets/images/cases/persepolis/02persepolistumbeditfull-mv6s6xal.mp4" autoplay loop muted playsinline></video>
+          </div>
+          <div class="case-overlay-info">
+            <span class="case-client-badge">Getty × Monks</span>
+            <h3 class="case-title">
+              Persepolis Reimagined
+              <span class="case-arrow-btn">↗</span>
+            </h3>
+            <p class="case-summary">
+              A WebGL experience letting anyone walk through the ancient Persian city as it once stood.
+            </p>
+          </div>
+        </article>
+
+        <!-- 4. The Pleasure Pursuit -->
+        <article class="case-card case-card-half" data-case="coach">
+          <div class="case-media-wrap">
+            <img src="assets/images/cases/new-case/coach01-mvwhd2e1.webp" alt="The Pleasure Pursuit">
+          </div>
+          <div class="case-overlay-info">
+            <span class="case-client-badge">Coach × Monks</span>
+            <h3 class="case-title">
+              The Pleasure Pursuit
+              <span class="case-arrow-btn">↗</span>
+            </h3>
+            <p class="case-summary">
+              Tom Wesselmann collection brought to life in WebGL with playful shaders and physics.
+            </p>
+          </div>
+        </article>
+
+        <!-- 5. We are all Angel -->
+        <article class="case-card case-card-half" data-case="mugler">
+          <div class="case-media-wrap">
+            <video src="assets/images/cases/mugler/muglerclip02small-mv59uygw.mp4" autoplay loop muted playsinline></video>
+          </div>
+          <div class="case-overlay-info">
+            <span class="case-client-badge">Mugler × Monks</span>
+            <h3 class="case-title">
+              We are all Angel
+              <span class="case-arrow-btn">↗</span>
+            </h3>
+            <p class="case-summary">
+              Interactive personality match questionnaire matching you with 3D celestial NFT Angels.
+            </p>
+          </div>
+        </article>
+
+        <!-- 6. Year of Greta -->
+        <article class="case-card case-card-half" data-case="greta">
+          <div class="case-media-wrap">
+            <video src="assets/images/cases/year-of-greta/gretashotmobile01-mv5arxes.mp4" autoplay loop muted playsinline></video>
+          </div>
+          <div class="case-overlay-info">
+            <span class="case-client-badge">Superhero Cheesecake</span>
+            <h3 class="case-title">
+              Year of Greta
+              <span class="case-arrow-btn">↗</span>
+            </h3>
+            <p class="case-summary">
+              One simple interaction to scroll through the year that named Greta Thunberg Person of the Year.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Working Together Section -->
+    <section id="together" class="working-together-section">
+      <div class="working-grid">
+        <div class="working-content">
+          <h2>WORKING TOGETHER</h2>
+          <p>
+            Orchestrated is built around one idea: motion should be a core part of the production process. It’s a powerful tool that can solve as many problems as it can create. Getting it right isn’t the animator’s job alone. Nor should it be a last-minute task for a developer: everyone involved should be Motion Minded™ from the start. And I help teams get there.
+          </p>
+          <p>
+            Other times I’m hands-on: directing motion inside your team, building motion mockups and Rive animations, or making tangible prototypes so you can try an idea before it’s built.
+          </p>
+          <button class="glass-pill copy-email-btn" data-copy-email>
+            COPY EMAIL ADDRESS
+          </button>
+        </div>
+
+        <div class="portrait-container">
+          <img src="assets/images/portrait.webp" alt="Portrait of Joris van Raaij">
+        </div>
+      </div>
+
+      <!-- Capabilities List -->
+      <div class="capabilities-wrap">
+        <h3>WHAT I DO</h3>
+        <ul class="capabilities-list">
+          <li class="capability-tag">Motion direction</li>
+          <li class="capability-tag">Motion systems & guidelines</li>
+          <li class="capability-tag">Immersive & interactive motion</li>
+          <li class="capability-tag">Rive animation</li>
+          <li class="capability-tag">Tangible prototypes</li>
+        </ul>
+        <p class="experience-tagline">
+          13 years in motion, with agencies like Monks and Superhero Cheesecake, now independently through Orchestrated.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer & Get In Touch -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <span class="footer-heading">GET IN TOUCH</span>
+        <a href="mailto:info@orchestrated.nl" class="footer-email-link" data-copy-email>
+          info@orchestrated.nl
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/jorisvanraaij/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        </div>
+        <div class="footer-legal">
+          <span>© 2026</span>
+          <span>KVK 70202796</span>
+          <span>BTW NL002261720B43</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ========================================================================
+       Floating Freelance Pill (Fixed Position with live interaction)
+       ======================================================================== -->
+  <div class="FreelancePill_wrap__LuTnb" data-fixed-ui="true">
+    <button type="button" class="FreelancePill_pill__wfiQo freelance-pill" id="freelance-pill" aria-label="Available for freelance — copy my e-mail address">
+      <span class="FreelancePill_surface__xce5k">
+        <span class="FreelancePill_content__UPbD6">
+          <span class="FreelancePill_icon__pw4XJ"><span class="green-pulse-dot FreelancePill_dot__k3MP8"></span></span>
+          <span class="FreelancePill_labels__9pShf">
+            <span class="FreelancePill_label__RX_P0" id="freelance-text">Available for freelance — copy my e-mail address</span>
+          </span>
+        </span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast-notice" class="toast-notice" role="alert" aria-live="polite">
+    COPIED TO CLIPBOARD
+  </div>
+
+  <!-- ========================================================================
+       Modals
+       ======================================================================== -->
+
+  <!-- 1. Showreel Video Modal -->
+  <div id="reel-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Showreel">
+    <button class="modal-close-btn" aria-label="Close modal">✕</button>
+    <div class="modal-dialog reel-modal-dialog">
+      <div class="reel-video-container">
+        <video id="reel-video" src="assets/video/showreel.mp4" playsinline controls></video>
+        <div class="video-custom-controls">
+          <button id="video-play-pause" class="glass-pill" style="padding: 4px 12px; font-size: 11px;">PLAY</button>
+          <input type="range" id="video-scrubber" class="video-scrubber" value="0" min="0" max="100" step="0.1">
+          <span id="video-time" class="video-time-display">0:00 / 1:16</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Credits Modal -->
+  <div id="credits-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Credits">
+    <button class="modal-close-btn" aria-label="Close modal">✕</button>
+    <div class="modal-dialog credits-dialog">
+      <h3 class="credits-title">Special Thanks</h3>
+      <ul class="credits-list">
+        <li>Mischa Loppies</li>
+        <li>Sinésio Couceiro</li>
+        <li>Johan Holwerda</li>
+        <li>Reinder Nijhoff</li>
+        <li>Dikkie Baan</li>
+        <li>Esmee Lechner</li>
+      </ul>
+      <button class="glass-pill modal-close-btn-inline" onclick="document.getElementById('credits-modal').classList.remove('active'); document.body.style.overflow='';">
+        CLOSE
+      </button>
+    </div>
+  </div>
+
+  <!-- 3. Sound Studio Modal -->
+  <div id="studio-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Sound Studio">
+    <button class="modal-close-btn" aria-label="Close modal">✕</button>
+    <div class="modal-dialog studio-dialog">
+      <h3 class="studio-title">SOUND STUDIO</h3>
+      <p class="studio-subtext">Toggle individual synthesizer channels and ambient atmosphere:</p>
+      
+      <div class="audio-track-list">
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Bass</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="bass">ACTIVE</button>
+          </div>
+        </div>
+
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Chords</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="chords">ACTIVE</button>
+          </div>
+        </div>
+
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Melody</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="melody">ACTIVE</button>
+          </div>
+        </div>
+
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Drums</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="drums">ACTIVE</button>
+          </div>
+        </div>
+
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Lamp</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="lamp">ACTIVE</button>
+          </div>
+        </div>
+
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Air</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="air">ACTIVE</button>
+          </div>
+        </div>
+
+        <div class="audio-track-item">
+          <div class="track-info">
+            <div class="track-equalizer-bars"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+            <span>Particles</span>
+          </div>
+          <div class="track-controls">
+            <button class="track-btn active" data-track="particles">ACTIVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Case Study Details Modal -->
+  <div id="case-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Case study details">
+    <button class="modal-close-btn" aria-label="Close modal">✕</button>
+    <div class="modal-dialog case-modal-dialog">
+      <div id="case-modal-content">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Scripts -->
+  <script src="audio.js"></script>
+  <script src="webgl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
